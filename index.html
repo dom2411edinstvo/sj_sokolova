@@ -359,10 +359,12 @@
     /* FOUNDER CARD */
     .founder-card {
       background: linear-gradient(135deg, #fffef0, #fff8d0);
-      border-radius: 10px; padding: 2rem;
+      border-radius: 10px; padding: 2rem 2rem 2rem 2rem;
       border: 1.5px solid rgba(245,197,24,0.25); box-shadow: var(--shadow-sm);
       display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem;
+      box-sizing: border-box;
     }
+    .founder-info { min-width: 0; flex: 1; }
     .founder-avatar {
       width: 80px; height: 80px; min-width: 80px;
       border-radius: 50%; overflow: hidden;
@@ -398,6 +400,7 @@
       background: linear-gradient(145deg, #fffef2, #fff8cd);
       border-radius: 24px; padding: 2.5rem 3rem;
       box-shadow: var(--shadow-md); border: 1px solid rgba(245,197,24,0.2);
+      overflow: hidden; box-sizing: border-box; width: 100%;
     }
     .msg-left p { font-size: 1rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 2rem; }
     .msg-avatar-group { display: flex; align-items: center; gap: 1rem; }
@@ -549,7 +552,11 @@
       .hero-image-wrap { order: -1; }
       .hero-image-frame { max-width: 320px; margin: 0 auto; }
       .about-inner, .course-inner, .partner-inner, .contacts-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .msg-card { grid-template-columns: 1fr; padding: 1.8rem; gap: 2rem; }
+      .msg-card { grid-template-columns: 1fr; padding: 1.2rem; gap: 1.5rem; border-radius: 16px; }
+      .msg-form { min-width: 0; width: 100%; }
+      .form-input { width: 100%; min-width: 0; }
+      .goal-option { font-size: 0.78rem; padding: 0.55rem 0.5rem; word-break: break-word; }
+      .msg-card > div { min-width: 0; width: 100%; }
       .test-container { padding: 1.8rem; }
       .test-result { padding: 1.8rem; }
       .footer-dev { text-align: left; }
@@ -620,7 +627,7 @@
         <div class="hero-image-frame" onclick="openLightbox('img/1.jpg','Любовь Соколова — Интеллект-тренер')" title="Нажмите для увеличения">
           <img src="img/1.jpg" alt="Любовь Соколова — Интеллект-тренер" />
           <div class="hero-decor-ring"></div>
-          <div class="hero-decor-dot">🌻</div>
+
           <div class="hero-stat-card top-left">
             <span class="stat-icon">⭐</span>
             <div class="stat-text">
